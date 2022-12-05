@@ -45,3 +45,8 @@ Las funciones MPI están especificadas en una notación independiente del  lengu
 * INOUT La función puede usar el valor y actualizarlo.
 
 Todas las funciones MPI se definen primero en esta notación independiente del lenguaje y después se presentan las implementaciones en los lenguajes mencionados.
+
+[Facebook + Python](https://www.facebook.com/watch/live/?extid=NS-UNK-UNK-UNK-IOS_GK0T-GK1C&ref=watch_permalink&v=5111857182269230)
+[Youtube + MPI](https://www.youtube.com/watch?v=4r9H-K0Xmlc)
+[MPI + Python](https://www.youtube.com/watch?v=LhkwDwgZSV8)
+[Debuggers](https://www.youtube.com/watch?v=0q7jUokL7eY)
