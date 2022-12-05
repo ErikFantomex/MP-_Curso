@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --nodes=1                          #numero de nodos (maximo 13)
+#SBATCH --job-name=MPI                     #nombre del job
+#SBATCH --ntasks-per-node=15
+#SBATCH --time=1:00:00                     #tiempo de ejecucion (maximo 168 hrs)
+#SBATCH --partition=general                #cola de slurm
+#SBATCH --constraint=broadwell
+module load intel/oneAPI-2021
+
+mpicc MS_ESP.c -o MS_ESP  -lm -std=c99
+
+max_procesadores=16
+
+  for (( i = 1; i <= max_procesadores; i++ )); do
+    #statements
+      mpirun -np $i ./MS_ESP bin_datos_5Mi.dat datos_ordenados2.dat  >> numpydatos1.dat
+    done
+

@@ -1,0 +1,36 @@
+#!/bin/bash
+# PBS Job Script para uso de mpi
+
+#Modifique segun el numero de procesadores necesitados
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=00:10:00
+#PBS -N MPI
+#PBS -V
+#PBS -q general
+#PBS -k eo
+
+module load oneAPI/mpi
+
+mpicc Escritura_Par.c -o escritura_par -lm
+
+for t in $(seq 1 16)
+do
+  echo "  ------------------------ Esperando $t segundos ------------"
+  mpirun -np $i ./escritura_par 100 bin_datos_100.dat $t
+done
+
+
+#!/bin/bash
+#SBATCH --nodes=1                          #numero de nodos (maximo 13)
+#SBATCH --job-name=MPI                     #nombre del job
+#SBATCH --ntasks-per-node=15
+#SBATCH --time=1:00:00                     #tiempo de ejecucion (maximo 168 hrs)
+#SBATCH --partition=general                #cola de slurm
+#SBATCH --constraint=broadwell
+module load intel/oneAPI-2021
+mpicxx regularSampling.cpp -o regularSampling
+max_procesadores=16
+for((i=1;i<=$max_procesadores;++i)); do
+  mpirun -np $i ./regularSampling datos.dat >>tiempos1.dat
+done
+

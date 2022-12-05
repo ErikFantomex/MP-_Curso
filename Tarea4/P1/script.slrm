@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --nodes=1                          #numero de nodos (maximo 13)
+#SBATCH --job-name=MPI                     #nombre del job
+#SBATCH --ntasks-per-node=15
+#SBATCH --time=1:00:00                     #tiempo de ejecucion (maximo 168 hrs)
+#SBATCH --partition=general                #cola de slurm
+#SBATCH --constraint=broadwell
+module load intel/oneAPI-2021
+mpicxx Maxgap.cpp -o Maxgap
+max_procesadores=15
+for((i=1;i<=$max_procesadores;++i)); do
+  mpirun -np $i ./Maxgap 2000000 >>tiempos3.dat
+done

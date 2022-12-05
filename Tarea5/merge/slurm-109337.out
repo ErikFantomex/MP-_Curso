@@ -1,0 +1,71 @@
+	 Intel oneAPI 2021
+mergesplit.cpp: In function â€˜int main(int, char**)â€™:
+mergesplit.cpp:145:26: error: invalid conversion from â€˜intâ€™ to â€˜const char*â€™ [-fpermissive]
+       printf( np , tTotal);
+                          ^
+In file included from /opt/intel/oneapi/mpi/2021.1.1/include/mpicxx.h:94:0,
+                 from /opt/intel/oneapi/mpi/2021.1.1/include/mpi.h:2322,
+                 from mergesplit.cpp:2:
+/usr/include/stdio.h:362:12: error:   initializing argument 1 of â€˜int printf(const char*, ...)â€™ [-fpermissive]
+ extern int printf (const char *__restrict __format, ...);
+            ^
+
+N£mero de procesos = 1
+Cantidad de elementos = 10000000
+Tiempo total = 2.693625 segundos 
+
+N£mero de procesos = 2
+Cantidad de elementos = 10000000
+Tiempo total = 1.871307 segundos 
+
+N£mero de procesos = 3
+Cantidad de elementos = 10000000
+Tiempo total = 1.724654 segundos 
+
+N£mero de procesos = 4
+Cantidad de elementos = 10000000
+Tiempo total = 1.521009 segundos 
+
+N£mero de procesos = 5
+Cantidad de elementos = 10000000
+Tiempo total = 1.471471 segundos 
+
+N£mero de procesos = 6
+Cantidad de elementos = 10000000
+Tiempo total = 1.374797 segundos 
+
+N£mero de procesos = 7
+Cantidad de elementos = 10000000
+Tiempo total = 1.351196 segundos 
+
+N£mero de procesos = 8
+Cantidad de elementos = 10000000
+Tiempo total = 1.300312 segundos 
+
+N£mero de procesos = 9
+Cantidad de elementos = 10000000
+Tiempo total = 1.295210 segundos 
+
+N£mero de procesos = 10
+Cantidad de elementos = 10000000
+Tiempo total = 1.256660 segundos 
+
+N£mero de procesos = 11
+Cantidad de elementos = 10000000
+Tiempo total = 1.255905 segundos 
+
+N£mero de procesos = 12
+Cantidad de elementos = 10000000
+Tiempo total = 1.223194 segundos 
+
+N£mero de procesos = 13
+Cantidad de elementos = 10000000
+Tiempo total = 1.231317 segundos 
+
+N£mero de procesos = 14
+Cantidad de elementos = 10000000
+Tiempo total = 1.212792 segundos 
+
+N£mero de procesos = 15
+Cantidad de elementos = 10000000
+Tiempo total = 1.223853 segundos 

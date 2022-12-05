@@ -1,0 +1,16 @@
+#!/bin/bash
+# PBS Job Script para uso de mpi
+#Modifique segun el numero de procesadores necesitados
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=00:10:00
+#PBS -N MPI
+#PBS -V
+#PBS -q general
+#PBS -k eo
+
+
+module load intel/oneAPI-2021
+echo "pgm"
+gcc pgm.c -o pgm -lm
+./pgm  chessboard.pgm test_chessboard_sobel.pgm
+

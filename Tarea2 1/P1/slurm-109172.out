@@ -1,0 +1,14 @@
+	 Intel oneAPI 2021
+Contando primos en paralelo v1
+Programa que encuentra el numero de primos menores o iguales a 5000000
+
+Numeros primos totales: 348513
+Numero de procesos: 1, Tiempo ejecutado en: 1716.5843051369 
+Programa que encuentra el numero de primos menores o iguales a 5000000
+
+Numeros primos totales: 348513
+Numero de procesos: 2, Tiempo ejecutado en: 1266.5480616838 
+Programa que encuentra el numero de primos menores o iguales a 5000000
+slurmstepd: error: *** STEP 109172.2 ON ibnodo19 CANCELLED AT 2022-10-31T15:45:53 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 109172 ON ibnodo19 CANCELLED AT 2022-10-31T15:45:53 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
